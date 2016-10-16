@@ -11,15 +11,21 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'modules/core/views/home.client.view.html'
+        templateUrl: 'modules/core/views/home.client.view.html',
+        controller: 'HomeController',
+        controllerAs: 'vm'
       })
+
       .state('dashboard', {
         url: '/dashboard',
         templateUrl: 'modules/core/views/dashboard.client.view.html',
+        controller: 'DashboardController',
+        controllerAs: 'vm',
         data: {
           roles: ['user', 'admin']
         }
       })
+      
       .state('not-found', {
         url: '/not-found',
         templateUrl: 'modules/core/views/404.client.view.html'

@@ -4,27 +4,25 @@ angular.module('core').controller('HeaderController', ['$mdSidenav', '$scope', '
   function ($mdSidenav, $scope, $state, Authentication, Menus) {
     // Expose view variables
     var vm = this;
-    vm.$state = $state;
-    vm.accountMenu = Menus.getMenu('account');
-    vm.authentication = Authentication;
-    
 
     function buildToggler(componentId) {
-      return function() {
+      return function () {
         $mdSidenav(componentId).toggle();
       };
     }
 
-    // Get the topbar menu
+    vm.$state = $state;
+    vm.authentication = Authentication;
+    vm.accountMenu = Menus.getMenu('account');
     vm.menu = Menus.getMenu('dashboard');
-
     vm.toggleLeft = buildToggler('left');
+
 
     // Collapsing the menu after navigation
     $scope.$on('$stateChangeSuccess', function () {
       vm.toggleLeft = buildToggler('left');
     });
 
-    
+
   }
 ]);
