@@ -1,8 +1,15 @@
 .content {
-  margin-top: 50px;
+  margin-top: 100px;
+}
+html,
+body {
+  background-color: #ededed;
 }
 .undecorated-link:hover {
   text-decoration: none;
+}
+.jumbotron {
+  background-color: silver;
 }
 [ng\:cloak],
 [ng-cloak],
@@ -36,4 +43,8 @@ a:hover .header-profile-image {
 
 .white {
   background-color: #fff;
+}
+
+.navbar-fixed-top {
+  z-index: 10 !important;
 }
