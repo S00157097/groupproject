@@ -83,8 +83,7 @@
 
 			<md-menu md-offset="0 -7" ng-show="vm.authentication.user">
 				<md-button aria-label="Open demo menu" ng-click="$mdOpenMenu($event)">
-					<img ng-src="/{{vm.authentication.user.profileImageURL}}" alt="{{vm.authentication.user.displayName}}" class="header-profile-image"
-					/>
+					<img ng-src="/{{vm.authentication.user.profileImageURL}}" alt="{{vm.authentication.user.displayName}}" class="header-profile-image">
 					<span ng-bind="vm.authentication.user.displayName"></span>
 				</md-button>
 
@@ -92,6 +91,7 @@
 					<md-menu-item ng-repeat="item in vm.accountMenu.items">
 						<md-button ui-sref="{{item.state}}" ng-bind="item.title" aria-label="{{item.state}}"></md-button>
 					</md-menu-item>
+           <md-divider ng-if="!$last"></md-divider>
 					<md-menu-item>
 						<md-button href="/api/auth/signout" target="_self">Sign Out</md-button>
 					</md-menu-item>
@@ -110,6 +110,7 @@
 			<md-menu-item ng-repeat="item in vm.menu.items | orderBy: 'position'" ng-show="item.shouldRender(vm.authentication.user);">
 				<md-button data-ng-bind="::item.title" aria-label="{{item.state}}" ui-sref="{{item.state}}"></md-button>
 			</md-menu-item>
+       <md-divider></md-divider>
 			<md-menu-item>
 				<md-button class="md-primary" data-ng-click="vm.toggleLeft()" aria-label="close">Close</md-button>
 			</md-menu-item>

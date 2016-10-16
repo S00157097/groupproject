@@ -5,13 +5,15 @@ angular.module('core').controller('HeaderController', ['$mdSidenav', '$scope', '
     // Expose view variables
     var vm = this;
     vm.$state = $state;
+    vm.accountMenu = Menus.getMenu('account');
     vm.authentication = Authentication;
+    
 
     function buildToggler(componentId) {
       return function() {
         $mdSidenav(componentId).toggle();
-      }
-    };
+      };
+    }
 
     // Get the topbar menu
     vm.menu = Menus.getMenu('dashboard');

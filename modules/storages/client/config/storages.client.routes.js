@@ -14,7 +14,7 @@
           templateUrl: 'modules/storages/views/storages.client.view.html',
           controller: 'StorageController',
           controllerAs: 'vm'
-        })
+        });
     }
   ]);
 } ());
