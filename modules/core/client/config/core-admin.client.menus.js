@@ -23,15 +23,6 @@ angular.module('core.admin').run(['Menus',
 
 
     Menus.addMenuItem('dashboard', {
-      title: 'Statistics',
-      state: 'dashboard',
-      type: 'item',
-      isPublic: false,      
-      roles: ['user', 'admin'],
-      position: 3
-    });
-
-    Menus.addMenuItem('dashboard', {
       title: 'Documentation',
       state: 'home',
       type: 'item',
