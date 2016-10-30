@@ -1,7 +1,7 @@
 <div class="jumbotron color-teal">
 	<h1>Landing Page</h1>
 </div>
-  
+
 <div class="section md-padding color-teal" style="padding: 150px 0;">
 	<div class="row">
 		<div class="col-md-4" ng-repeat="icon in ::vm.icons">
@@ -25,10 +25,7 @@
 	</div>
 </div>
 
-<div
-	class="section section--block md-padding extra-padding"
-	ng-repeat="o in [1, 2, 3]"
-	ng-class="{'color-inverse':$even}">
+<div class="section section--block md-padding extra-padding" ng-repeat="o in [1, 2, 3]" ng-class="{'color-inverse':$even}">
 	<h2 class="text-center border-bottom">More Detail About this</h2>
 
 	<div class="content">
@@ -46,3 +43,27 @@
 	</div>
 </div>
 
+<div class="section md-padding extra-padding">
+	<h2 class="text-center border-bottom">Our Developers</h2>
+
+	<div class="content">
+		<div class="row">
+			<div class="col-md-3" ng-repeat="n in [1, 2, 3, 4]">
+				<md-card>
+					<img ng-src="https://material-design.storage.googleapis.com/publish/material_v_4/social.png" class="md-card-image" alt="Washed Out">
+					<md-card-title>
+						<md-card-title-text>
+							<span class="md-headline">Developer</span>
+						</md-card-title-text>
+					</md-card-title>
+					<md-card-content>
+						<p>
+							The titles of Washed Out's breakthrough song and the first single from Paracosm share the two most important words in Ernest
+							Greene's musical language: feel it. It's a simple request, as well...
+						</p>
+					</md-card-content>
+				</md-card>
+			</div>
+		</div>
+	</div>
+</div>
