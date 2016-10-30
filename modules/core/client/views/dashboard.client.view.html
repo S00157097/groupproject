@@ -21,27 +21,41 @@
 	<div class="row">
 		<div class="col-md-12">
 			<md-content class="md-whiteframe-1dp md-padding md-margin white">
-				<div style="min-height: 300px;">
+				<div class="row">
+					<div class="col-md-8">
+						<div style="min-height: 300px;">
 					
-				</div>
-
-				<div class="md-padding">
-					<md-button class="md-primary">Some Button</md-button>
-					<md-button class="md-primary">Some Button</md-button>
-					<md-button class="md-primary">Some Button</md-button>
-					<md-button class="md-primary">Some Button</md-button>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<md-list>
+							<md-list-item ng-click="p()" ng-repeat="n in [1, 2, 3, 4]">
+								<p>Some Button</p>
+							</md-list-item>
+						</md-list>
+					</div>
 				</div>
 			</md-content>
 		</div>
 	</div>
 
 	<div layout flex>
-			<md-content flex class="md-whiteframe-1dp md-padding md-margin white">
-				<div style="min-height: 300px;"></div>
-			</md-content>
-
-			<md-content flex class="md-whiteframe-1dp md-padding md-margin white">
-				<div style="min-height: 300px;"></div>
-			</md-content>
+		<md-card flex class="md-whiteframe-1dp md-padding md-margin white" ng-repeat="n in [1, 2]">
+			<md-card-title>
+				<md-card-title-text>
+					<p class="md-headline">Some Heading</p>
+				</md-card-title-text>
+			</md-card-title>
+			<md-card-content>
+				<md-content>
+					<md-list>
+						<md-list-item ng-repeat="o in [1, 2, 3, 4, 5, 6]">
+							<span class="md-list-item-text">Some Content</span>
+							<md-button class="md-secondary">Some Button</md-button>
+						</md-list-item>
+					</md-list>
+				</md-content>
+			</md-card-content>
+		</md-card>
 	</div>
 </section>
