@@ -1,5 +1,48 @@
-<section class="container">
-  <div class="jumbotron">
-    <h1>Landing Page</h1>
-  </div>
-</section>
+<div class="jumbotron">
+	<h1>Landing Page</h1>
+</div>
+  
+<div class="section md-padding" style="padding: 150px 0;">
+	<div class="row">
+		<div class="col-md-4" ng-repeat="icon in ::vm.icons">
+			<div class="icon">
+				<h3 class="border-bottom" ng-bind="::icon.title"></h3>
+
+
+				<div class="row">
+					<div class="col-md-5">
+						<i class="material-icons icon__icon" ng-bind="::icon.icon"></i>
+					</div>
+					<div class="col-md-7">
+						<p class="icon__text">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum eum reiciendis. Lorem ipsum dolor sit amet, consectetur adipisicing
+							elit. Cum eum reiciendis.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div
+	class="section section--block md-padding extra-padding"
+	ng-repeat="o in [1, 2, 3]"
+	ng-class="{'color-inverse':$even}">
+	<h2 class="text-center border-bottom">More Detail About this</h2>
+
+	<div class="content">
+		<div class="row" layout layout-align="center center">
+			<div class="col-md-5" ng-show="$even"></div>
+			<div class="col-md-5">
+				<p class="md-padding text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias assumenda quis a consectetur rem, quibusdam libero
+					cumque vitae quam placeat ut voluptates modi neque fuga tempore nihil veritatis quisquam repudiandae!</p>
+			</div>
+			<div class="col-md-5" ng-show="$odd"></div>
+			<div ng-class="{'content-image':$even, 'content-image--right':$odd}">
+				<img src="http://placehold.it/350x150" alt="Some Image" class="img-responsive img">
+			</div>
+		</div>
+	</div>
+</div>
+
