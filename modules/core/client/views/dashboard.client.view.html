@@ -1,6 +1,6 @@
 <section class="container">
 	<div class="row">
-		<div class="col-md-4" ng-repeat="info in vm.info track by $index">
+		<div class="col-md-6" ng-repeat="info in vm.info track by $index">
 			<md-card>
 				<md-card-title layout-align="center">
 					<md-card-title-text>
@@ -21,21 +21,27 @@
 	<div class="row">
 		<div class="col-md-12">
 			<md-content class="md-whiteframe-1dp md-padding md-margin white">
-				<div style="min-height: 300px;"></div>
+				<div style="min-height: 300px;">
+					
+				</div>
+
+				<div class="md-padding">
+					<md-button class="md-primary">Some Button</md-button>
+					<md-button class="md-primary">Some Button</md-button>
+					<md-button class="md-primary">Some Button</md-button>
+					<md-button class="md-primary">Some Button</md-button>
+				</div>
 			</md-content>
 		</div>
+	</div>
 
-		<div class="col-md-12">
-			<md-content class="md-whiteframe-1dp md-padding md-margin white">
+	<div layout flex>
+			<md-content flex class="md-whiteframe-1dp md-padding md-margin white">
 				<div style="min-height: 300px;"></div>
 			</md-content>
-		</div>
 
-        <div class="col-md-12">
-			<md-content class="md-whiteframe-1dp md-padding md-margin white">
+			<md-content flex class="md-whiteframe-1dp md-padding md-margin white">
 				<div style="min-height: 300px;"></div>
 			</md-content>
-		</div>
-
 	</div>
 </section>
