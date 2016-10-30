@@ -10,11 +10,9 @@ body {
   text-decoration: none;
 }
 .jumbotron {
-  background-color: teal;
   border-radius: 0 !important;
   color: #fff;
   margin-bottom: 0;
-  height: 400px;
 }
 [ng\:cloak],
 [ng-cloak],
@@ -103,4 +101,9 @@ a:hover .header-profile-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.color-teal {
+  background-color: mediumseagreen;
+  color: #fff;
 }
