@@ -1,4 +1,5 @@
 <section class="container">
+
 	<div class="row">
 		<div class="col-md-6" ng-repeat="info in vm.info track by $index">
 			<md-card>
@@ -20,22 +21,28 @@
 
 	<div class="row">
 		<div class="col-md-12">
-			<md-content class="md-whiteframe-1dp md-padding md-margin white">
-				<div class="row">
-					<div class="col-md-8">
-						<div style="min-height: 300px;">
-							<chartist data="vm.data" options="vm.options" type="vm.type"></chartist>
+			<md-card>
+				<md-card-content class="">
+					<div class="row md-padding">
+						<div class="col-md-8">
+							<canvas id="line" class="chart chart-line" chart-data="vm.data" chart-labels="vm.labels" chart-series="vm.series" chart-options="vm.options"
+								chart-dataset-override="vm.datasetOverride">
+							</canvas>
+						</div>
+
+						<div class="col-md-4">
+							<md-list class="md-dense">
+								<md-list-item ng-click="p()" ng-repeat="n in [1, 2, 3, 4]">
+									<p>Quick Access Statistics</p>
+								</md-list-item>
+								<md-list-item ng-click="p()">
+									<p>Add Statistic</p>
+								</md-list-item>
+							</md-list>
 						</div>
 					</div>
-					<div class="col-md-4">
-						<md-list>
-							<md-list-item ng-click="p()" ng-repeat="n in [1, 2, 3, 4]">
-								<p>Some Button</p>
-							</md-list-item>
-						</md-list>
-					</div>
-				</div>
-			</md-content>
+				</md-card-content>
+			</md-card>
 		</div>
 	</div>
 

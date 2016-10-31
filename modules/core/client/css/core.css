@@ -6,6 +6,9 @@ html,
 body {
   background-color: #ededed;
 }
+.container-fluid {
+  padding: 0;
+}
 .undecorated-link:hover {
   text-decoration: none;
 }
@@ -104,6 +107,6 @@ a:hover .header-profile-image {
 }
 
 .color-teal {
-  background-color: mediumseagreen;
+  background-color: #098;
   color: #fff;
 }

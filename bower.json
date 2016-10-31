@@ -13,7 +13,8 @@
     "angular-ui-router": "~0.2",
     "angular-file-upload": "1.1.5",
     "angular-chartist": "*",
-    "chartist": "^0.10.1"
+    "chartist": "^0.10.1",
+    "angular-chart.js": "^1.0.3"
   },
   "resolutions": {
     "angular": "~1.3"

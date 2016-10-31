@@ -1,6 +1,6 @@
-<div class="jumbotron color-teal">
+<!--<div class="jumbotron color-teal">
 	<h1>Landing Page</h1>
-</div>
+</div>-->
 
 <div class="section md-padding color-teal" style="padding: 150px 0;">
 	<div class="row">
@@ -28,15 +28,16 @@
 <div class="section section--block md-padding extra-padding" ng-repeat="o in [1, 2, 3]" ng-class="{'color-inverse':$even}">
 	<h2 class="text-center border-bottom">More Detail About this</h2>
 
-	<div class="content">
-		<div class="row" layout layout-align="center center">
-			<div class="col-md-5" ng-show="$even"></div>
-			<div class="col-md-5">
-				<p class="md-padding text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias assumenda quis a consectetur rem, quibusdam libero
+	<div class="content md-padding">
+		<div class="row">
+			<div  class="col-md-6 col-sm-6 col-xs-12" ng-show="$odd">
+				<img src="https://material-design.storage.googleapis.com/publish/material_v_4/social.png" alt="Some Image" class="img-responsive img">
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				<p class="md-padding text-center lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias assumenda quis a consectetur rem, quibusdam libero
 					cumque vitae quam placeat ut voluptates modi neque fuga tempore nihil veritatis quisquam repudiandae!</p>
 			</div>
-			<div class="col-md-5" ng-show="$odd"></div>
-			<div ng-class="{'content-image':$even, 'content-image--right':$odd}">
+			<div  class="col-md-6 col-sm-6 col-xs-12" ng-show="$even">
 				<img src="https://material-design.storage.googleapis.com/publish/material_v_4/social.png" alt="Some Image" class="img-responsive img">
 			</div>
 		</div>
@@ -48,7 +49,7 @@
 
 	<div class="content">
 		<div class="row">
-			<div class="col-md-3" ng-repeat="n in [1, 2, 3, 4]">
+			<div class="col-md-3 col-sm-6 col-xs-12" ng-repeat="n in [1, 2, 3, 4]">
 				<md-card>
 					<img ng-src="https://material-design.storage.googleapis.com/publish/material_v_4/social.png" class="md-card-image" alt="Washed Out">
 					<md-card-title>
