@@ -7,7 +7,8 @@
         </div>
         <div class="text-center form-group" data-ng-hide="uploader.queue.length">
           <span class="btn btn-default btn-file">
-              Select Image <input type="file" nv-file-select uploader="uploader">
+              Select Image <input type="file" nv-file-select uploader="uploader" class="mb-button">
+              <input id="fileInput" name="file" type="file" class="ng-hide" multiple>
           </span>
         </div>
         <div class="text-center form-group" data-ng-show="uploader.queue.length">
@@ -16,6 +17,7 @@
         </div>
         <div data-ng-show="success" class="text-center text-success">
           <strong>Profile Picture Changed Successfully</strong>
+
         </div>
         <div data-ng-show="error" class="text-center text-danger">
           <strong data-ng-bind="error"></strong>
